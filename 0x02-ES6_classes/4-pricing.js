@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 import Currency from './3-currency';
 
 export default class Pricing {
@@ -20,6 +19,9 @@ export default class Pricing {
   }
 
   set currency(ccurrency) {
+    if (!(ccurrency instanceof Currency)) {
+      throw new TypeError('currency must be a Currency');
+    }
     this._currency = ccurrency;
   }
 
