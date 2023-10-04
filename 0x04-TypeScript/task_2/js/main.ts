@@ -47,14 +47,25 @@ export function createEmployee(salary: number | string) {
 }
 
 
-function isDirector(employee: Director | Teacher): employee is Director {
+export function isDirector(employee: Director | Teacher): employee is Director {
   return employee instanceof Director;
 }
 
-function executeWork(employee: Director | Teacher) {
+export function executeWork(employee: Director | Teacher) {
   if (isDirector(employee)) {
     return employee.workDirectorTasks();
   } else {
     return employee.workTeacherTasks();
+  }
+}
+
+
+export type Subjects = 'Math' | 'History';
+
+export function teachClass(todayClass: Subjects) {
+  if (todayClass === 'Math') {
+    return 'Teaching Math';
+  } else if (todayClass === 'History') {
+    return 'Teaching History';
   }
 }
