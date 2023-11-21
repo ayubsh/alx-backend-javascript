@@ -1,4 +1,4 @@
-const readdb = require('../utils');
+import readdb from '../utils';
 
 const majors = ['CS', 'SWE'];
 

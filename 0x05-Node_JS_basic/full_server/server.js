@@ -1,8 +1,10 @@
+import express from 'express';
 import approuter from './routes/index';
-
-const express = require('express');
 
 const app = express();
 
-app.use(approuter);
+approuter(app);
 app.listen(1245);
+
+export default app;
+module.exports = app;
