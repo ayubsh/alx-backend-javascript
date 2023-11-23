@@ -9,6 +9,7 @@
   "author": "ayubsh",
   "license": "ISC",
   "dependencies": {
+    "chai": "^4.3.10",
     "jest": "^29.7.0",
     "mocha": "^10.2.0"
   },
